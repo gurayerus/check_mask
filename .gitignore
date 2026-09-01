@@ -1,6 +1,7 @@
 # Project data
 /in/
 /out/
+/logs/
 
 # Vim swap files
 *.swp
