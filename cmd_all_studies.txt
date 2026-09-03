@@ -1,50 +1,191 @@
+# ./run_check_mask.sh IN='/cbica/projects/OASIS/OASIS3/Pipelines/OASIS3_DLMUSE_2025/Protocols/DLMUSE' T1_DLMUSE ./out/OASIS3
+
 IN='/cbica/projects/accord/Pipelines/ACCORD_DLMUSE_2025/Protocols/DLMUSE'
+STD='ACCORD'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ADNI/Pipelines/ADNI_DLMUSE_2025/Protocols/DLMUSE'
+STD='ADNI'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ADNI/Pipelines/ADNI-DOD_DLMUSE_2025/Protocols/DLMUSE'
+STD='ADNI-DOD'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/AIBL/Pipelines/AIBL_DLMUSE_2025/Protocols/DLMUSE'
+STD='AIBL'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/BIOCARD/Pipelines/BIOCARD_DLMUSE_2025/Protocols/DLMUSE'
+STD='BIOCARD'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/BLSA/Pipelines/MRI/BLSA_DLMUSE_2025/Protocols/DLMUSE'
+STD='BLSA'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
+
+
 IN='/cbica/projects/cardia/Pipelines/CARDIA_DLMUSE_2025/Protocols/DLMUSE'
+STD='CARDIA'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/GSP/Pipelines/GSP_DLMUSE_2025/Protocols/DLMUSE'
+STD='GSP'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/HABS/Pipelines/HABS_DLMUSE_2025/Protocols/DLMUSE'
+STD='HABS'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/HABLE/Pipelines/HABLE_DLMUSE_2025/Protocols/DLMUSE'
+STD='HABLE'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/handls/Pipelines/HANDLS_DLMUSE_2025/Protocols/DLMUSE'
+STD='HANDLS'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/HCP-Aging/Pipelines/HCP-Aging_DLMUSE_2025/Protocols/DLMUSE'
+STD='HCP-Aging'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/HCP-YA/Pipelines/HCP-YA_DLMUSE_2025/Protocols/DLMUSE'
+STD='HCP-YA'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/KBASE/Pipelines/KBASE_DLMUSE_2025/Protocols/DLMUSE'
+STD='KBASE'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/LookAhead/Pipelines/LookAhead_DLMUSE_2025/Protocols/DLMUSE'
+STD='LookAhead'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/MESA/MESA-AFIB/Pipelines/MESA-AFIB_DLMUSE_2025/Protocols/DLMUSE'
+STD='MESA-AFIB'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/OASIS/OASIS3/Pipelines/OASIS3_DLMUSE_2025/Protocols/DLMUSE'
+STD='OASIS3'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
+
+
 IN='/cbica/projects/OASIS/OASIS4/Pipelines/OASIS4_DLMUSE_2025/Protocols/DLMUSE'
+STD='OASIS4'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/chrisclark/ADC/Pipelines/ABC_DLMUSE_2025/Protocols/DLMUSE'
+STD='ABC'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/chrisclark/ADC/Pipelines/PMC_DLMUSE_2025/Protocols/DLMUSE'
+STD='PMC'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/POINTER/Pipelines/POINTER_DLMUSE_2026/Protocols/DLMUSE'
+STD='POINTER'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/PPMI/Pipelines/PPMI_DLMUSE_2026/Protocols/DLMUSE'
+STD='PPMI'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Prevent_AD/Pipelines/PreventAD_DLMUSE_2025/Protocols/DLMUSE'
+STD='PreventAD'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Greifswald/Pipelines/SHIP_DLMUSE_2025/Protocols/DLMUSE'
+STD='SHIP'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/sprint/Pipelines/SPRINT_DLMUSE_2025/Protocols/DLMUSE'
+STD='SPRINT'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/UKBB_Processed/Pipelines/UKBB_DLMUSE_2025/Protocols/DLMUSE'
+STD='UKBB'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/whims/Pipelines/WHIMS_DLMUSE_2025/Protocols/DLMUSE'
+STD='WHIMS'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/PreclinicalAD/PAC_Studies/WRAP/Pipelines/WRAP_DLMUSE_2025/Protocols/DLMUSE'
+STD='WRAP'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
+
+
 IN='/cbica/projects/NIAGADS/ADSP/Pipelines/ADSP_NACC_Release_V1_DLMUSE_2025/Protocols/DLMUSE'
+STD='ADSP_NACC_Release_V1'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ADNI/Pipelines/ADNI_ADSP_DLMUSE_2025/Protocols/DLMUSE'
+STD='ADNI_ADSP'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/NIAGADS/WASHU/Pipelines/WASHU_DLMUSE_2025/Protocols/DLMUSE'
+STD='WASHU'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/NIAGADS/WHICAP/Pipelines/WHICAP_DLMUSE_2025/Protocols/DLMUSE'
+STD='WHICAP'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/NIAGADS/ROSMAPMARS/Pipelines/ROSMAPMARS_DLMUSE_2025/Protocols/DLMUSE'
+STD='ROSMAPMARS'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/NIAGADS/WRAP/Pipelines/WRAP_DLMUSE_2025/Protocols/DLMUSE'
+STD='WRAP'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/NIAGADS/SCAN/Pipelines/SCAN_DLMUSE_2025/Protocols/DLMUSE'
+STD='SCAN'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/HABLE/Pipelines/HABLE_DLMUSE_2025/Protocols/DLMUSE'
+STD='HABLE'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/NIAGADS/Indiana/Pipelines/Indiana_DLMUSE_2026/Protocols/DLMUSE'
+STD='Indiana'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/A4/Pipelines/A4_DLMUSE_2025/Protocols/DLMUSE'
+STD='A4'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/ANMerge/Pipelines/ANMerge_DLMUSE_2025/Protocols/DLMUSE'
+STD='ANMerge'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/fitbir/Pipelines/FITBIR_DLMUSE_2025/Protocols/DLMUSE'
+STD='FITBIR'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ftdcenter/Pipelines/FTD-20250530_DLMUSE_2025/Protocols/DLMUSE'
+STD='FTD-20250530'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ftdcenter/Pipelines/FTD-CN_DLMUSE_2025/Protocols/DLMUSE'
+STD='FTD-CN'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ftdcenter/Pipelines/FTD-SET1_DLMUSE_2025/Protocols/DLMUSE'
+STD='FTD-SET1'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/ftdcenter/Pipelines/PolyPath_DLMUSE_2025/Protocols/DLMUSE'
+STD='PolyPath'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Public_Studies/IXI/Pipelines/IXI_DLMUSE_2025/Protocols/DLMUSE'
+STD='IXI'
+sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
+
 IN='/cbica/projects/Prevent_AD/Pipelines/PreventAD_Stage2_DLMUSE_2025/Protocols/DLMUSE'
-
-
-
+STD='PreventAD_Stage2'
 sbatch ./submit_check_mask.sh $IN T1_DLMUSE ./out/$STD
