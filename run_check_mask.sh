@@ -53,6 +53,10 @@ HEADER="img_name,n_components,comp1,comp_others,comp2,comp3,comp4,comp5,comp6,co
 
 voxels_csvs=()
 volume_csvs=()
+failed=()
+
+FAILED_LOG="$OUT_DIR/failed.txt"
+: > "$FAILED_LOG"
 
 for mask in "${masks[@]}"; do
     fname="$(basename "$mask")"
@@ -65,13 +69,30 @@ for mask in "${masks[@]}"; do
         echo "Skipping $fname (CSVs already exist)"
     else
         echo "Processing $fname ..."
-        n_components="$(python "$SCRIPT_DIR/check_mask.py" --in_mask "$mask" --out_prefix "$out_prefix" | tail -n 1)"
-        echo "  -> ${out_prefix}_{voxels,volume}.csv  (n_components=${n_components})"
+        # Run in an `if` so a failure here does not abort the whole script.
+        if n_components="$(python "$SCRIPT_DIR/check_mask.py" --in_mask "$mask" --out_prefix "$out_prefix" | tail -n 1)"; then
+            echo "  -> ${out_prefix}_{voxels,volume}.csv  (n_components=${n_components})"
+        else
+            echo "  !! FAILED: $fname -- skipping and continuing" >&2
+            rm -f "$out_voxels" "$out_volume"   # drop any partial output
+            failed+=("$fname")
+            echo "$fname" >> "$FAILED_LOG"
+            continue
+        fi
     fi
 
     voxels_csvs+=("$out_voxels")
     volume_csvs+=("$out_volume")
 done
+
+if [[ ${#failed[@]} -gt 0 ]]; then
+    echo "WARNING: ${#failed[@]} mask(s) failed and were skipped (see $FAILED_LOG)"
+fi
+
+if [[ ${#voxels_csvs[@]} -eq 0 ]]; then
+    echo "ERROR: no masks processed successfully; nothing to concatenate" >&2
+    exit 1
+fi
 
 # Concatenate per-mask CSVs, add a header, sort by comp_others (col 4) descending.
 concat_sorted() {
