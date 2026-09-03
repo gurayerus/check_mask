@@ -32,7 +32,7 @@ cd "${SLURM_SUBMIT_DIR:-$(pwd)}"
 # source ~/miniconda3/etc/profile.d/conda.sh && conda activate check_mask
 # source .venv/bin/activate
 
-echo "Job $SLURM_JOB_ID starting on $(date)"
+echo "Job $SLURM_JOB_ID starting on $(hostname) at $(date)"
 echo "Args: IN_DIR=$1  SUFFIX=$2  OUT_DIR=$3"
 
 ./run_check_mask.sh "$1" "$2" "$3"
